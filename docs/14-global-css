@@ -1,0 +1,62 @@
+globals.css
+│
+├── Imports
+├── Theme Mapping (Tailwind v4)
+├── Brand Tokens
+├── Semantic Tokens
+├── Typography Tokens
+├── Radius Tokens
+├── Shadow Tokens
+├── Layout Tokens
+├── Base Reset
+├── Scrollbar
+├── Selection
+├── Images
+├── Form Elements
+├── Utility Classes
+├── Hero Utilities
+├── Section Utilities
+├── Animation Utilities
+└── Dark Mode Ready
+
+
+Primary        #6B1F1F
+Primary Dark   #541616
+
+Gold           #C6A15B
+Gold Light     #D8BB7B
+
+Ivory          #F8F5EE
+Sand           #F2ECE1
+
+Brown          #2F241D
+Text           #5A4A40
+
+Border         #E3D5B7
+
+*ReadyMade Classes:*
+
+.section
+.section-sm
+.section-lg
+
+.container
+.container-reading
+
+.bg-brand-primary
+.bg-brand-ivory
+.bg-brand-sand
+
+.text-heading
+.text-body
+.text-brand-gold
+
+.shadow-card
+.shadow-image
+.shadow-button
+
+.hero-overlay
+.hero-glow
+.hero-divider
+
+.gold-divider

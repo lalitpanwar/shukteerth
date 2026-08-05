@@ -1,0 +1,15 @@
+import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
+import { Header } from "@/components/layout/Header";
+
+export default function WebsiteLayout({ children }) {
+  return (
+    <>
+    
+            <AnnouncementBar
+      text="श्रीमद्भागवत कथा • 10–17 अगस्त • ऑनलाइन पंजीकरण प्रारम्भ"
+    />
+    <Header />
+      <main>{children}</main>
+    </>
+  );
+}
