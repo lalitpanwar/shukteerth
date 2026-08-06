@@ -162,7 +162,7 @@
   --background: var(--brand-ivory);
   --foreground: var(--brand-brown);
 
-  --primary: var(--brand-maroon);
+  --primary: var(--brand-primary);
   --primary-foreground: var(--brand-ivory);
 
   --secondary: var(--brand-sand);
@@ -186,6 +186,13 @@
 
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
+
+  /* Charts */
+  --chart-1: var(--brand-primary);
+  --chart-2: var(--brand-gold);
+  --chart-3: var(--brand-saffron);
+  --chart-4: var(--brand-brown);
+  --chart-5: var(--brand-sand);
 
   /* ======================================================
      LAYOUT
@@ -239,6 +246,16 @@
   --muted: #33261f;
   --muted-foreground: #c5b8aa;
 
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+
+  /* Charts */
+  --chart-1: var(--brand-gold);
+  --chart-2: var(--brand-saffron);
+  --chart-3: var(--brand-primary);
+  --chart-4: #f8f1e7;
+  --chart-5: #4d3b2b;
+
   --sidebar: #221711;
   --sidebar-foreground: #f8f1e7;
   --sidebar-primary: var(--primary);
@@ -247,9 +264,6 @@
   --sidebar-accent-foreground: #f8f1e7;
   --sidebar-border: var(--border);
   --sidebar-ring: var(--ring);
-
-  --destructive: #ef4444;
-  --destructive-foreground: #ffffff;
 }
 
 /* ==========================================

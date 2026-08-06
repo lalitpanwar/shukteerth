@@ -19,11 +19,15 @@ export const metadata = {
   keywords: ["Shri Shukdev Ashram", "Uttarakhand ashram", "spiritual retreat", "meditation", "self-realisation"],
   openGraph: { type: "website", locale: "en_IN", siteName: "Shri Shukdev Ashram", title: "Shri Shukdev Ashram | A Path to Stillness", description: "A sacred space for inner awakening." },
 };
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en"
-     className={`${cormorant.variable} ${noto.variable}`}>
+    <html lang="hi"
+     className={`${cormorant.variable} ${noto.variable}  antialiased`}>
       <body>{children}</body>
     </html>
   );

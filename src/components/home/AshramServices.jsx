@@ -1,0 +1,111 @@
+"use client";
+
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
+
+import Section from "@/components/shared/section";
+import Container from "@/components/shared/container";
+import { ButtonLink } from "@/components/ui/custom";
+
+import { ashramLife } from "@/data/ashramLife.data";
+
+export default function AshramLife() {
+  return (
+    <Section className="bg-white py-20 lg:py-28">
+      <Container>
+        {/* Header */}
+        <div className="mb-14 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-3xl">
+            <span className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-brand-primary">
+              <span>→</span>
+              आश्रम जीवन
+            </span>
+
+            <h2 className="mt-5 font-heading text-4xl leading-tight text-brand-brown md:text-5xl xl:text-6xl">
+              सेवा • साधना • संस्कार
+            </h2>
+
+            <p className="mt-6 max-w-xl text-lg leading-8 text-brand-brown/70">
+              श्री शुकदेव आश्रम में सेवा, साधना और संस्कार के साथ एक दिव्य जीवन
+              की अनुभूति करें।
+            </p>
+          </div>
+
+          <ButtonLink
+            href="/ashram-life"
+            variant="link"
+            endIcon={
+              <ArrowRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />
+            }
+            className="shrink-0 px-0 text-base font-medium text-brand-primary hover:text-brand-gold"
+          >
+            आश्रम के बारे में जानें
+          </ButtonLink>
+        </div>
+
+        {/* Grid */}
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {ashramLife.map((item) => (
+            <article
+              key={item.id}
+              className="
+    group relative h-[400px] overflow-hidden rounded-2xl
+    transition-shadow duration-700 ease-out
+    hover:shadow-[0_25px_60px_rgba(0,0,0,0.14)]
+  "
+            >
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+                className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
+              />
+
+              {/* Gradient for legibility */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+
+              {/* Badge */}
+              <div className="absolute left-6 top-6">
+                <span
+                  className="
+        inline-flex items-center rounded-full
+        bg-black/30 px-3 py-1
+        text-xs font-medium tracking-wide text-white
+        backdrop-blur-sm
+      "
+                >
+                  {item.badge}
+                </span>
+              </div>
+
+              {/* Content */}
+              <div className="absolute inset-x-0 bottom-0 p-6">
+                <h3 className="font-heading text-2xl leading-snug text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.4)]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-2 line-clamp-2 text-sm leading-6 text-white/80 [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">
+                  {item.description}
+                </p>
+
+                <ButtonLink
+                  href={item.href}
+                  variant="link"
+                  endIcon={
+                    <ArrowRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />
+                  }
+                  className="mt-4 px-0 text-sm text-white/90 hover:text-white"
+                >
+                  और जानें
+                </ButtonLink>
+              </div>
+            </article>
+          ))}
+        </div>
+
+
+      </Container>
+    </Section>
+  );
+}

@@ -14,6 +14,11 @@ import Section from "@/components/shared/section";
 import { useState } from "react";
 import StoryTelling from "@/components/home/StoryTelling";
 import AboutAshram from "@/components/home/AboutAshram";
+import GuruParampara from "@/components/home/GuruParampara";
+import AshramServices from "@/components/home/OldAshramServices";
+import OldAshramLife from "@/components/home/OldAshramServices";
+import AshramLife from "@/components/home/AshramServices";
+import VisitShukteerth from "@/components/home/VisitShukteerth";
 
 
 export default function HomePage(){
@@ -24,7 +29,11 @@ export default function HomePage(){
 <Hero />
 <StoryTelling />
 <AboutAshram />
-<Section>
+<GuruParampara />
+<AshramLife />
+<VisitShukteerth />
+
+{/* <Section>
     <Container>
         <MobileNav />
         <LanguageSwitcher
@@ -32,7 +41,7 @@ export default function HomePage(){
         onChange={setLanguage}
          />
   hi</Container>
-  </Section>    
+  </Section>     */}
         </>
     )
 }

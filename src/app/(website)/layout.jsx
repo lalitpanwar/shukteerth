@@ -1,7 +1,12 @@
 import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
+import Footer from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
-export default function WebsiteLayout({ children }) {
+export default function PublicLayout({ children }) {
   return (
     <>
     
@@ -10,6 +15,7 @@ export default function WebsiteLayout({ children }) {
     />
     <Header />
       <main>{children}</main>
+      <Footer />
     </>
   );
 }

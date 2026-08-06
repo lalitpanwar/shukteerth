@@ -88,7 +88,7 @@ export default function StoryTelling() {
           {/* Accordion */}
 
           <div>
-            <Accordion value={activeStory} onValueChange={setActiveStory}>
+            <Accordion value={activeStory} onValueChange={setActiveStory} >
               {stories.map((story) => (
                 <AccordionItem
                   key={story.id}
