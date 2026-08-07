@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 import Section from "@/components/shared/section";
 import Container from "@/components/shared/container";
 import { ButtonLink } from "@/components/ui/custom";
+import { cn } from "@/lib/utils";
 
 import { ashramLife } from "@/data/ashramLife.data";
 
@@ -14,7 +15,7 @@ export default function AshramLife() {
   const rest = ashramLife.filter((item) => !item.featured);
 
   return (
-    <Section className="bg-white py-20 lg:py-28">
+    <Section id="services" className="scroll-mt-32 bg-white py-20 lg:py-28">
       <Container>
         {/* Header */}
         <div className="mb-14 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
@@ -105,14 +106,17 @@ export default function AshramLife() {
 
         {/* Grid */}
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {rest.map((item) => (
+          {rest.map((item, index) => (
             <article
               key={item.id}
-              className="
-    group relative h-[400px] overflow-hidden rounded-2xl
-    transition-shadow duration-700 ease-out
-    hover:shadow-[0_25px_60px_rgba(0,0,0,0.14)]
-  "
+              className={cn(
+                "group relative h-100 overflow-hidden rounded-2xl transition-shadow duration-700 ease-out hover:shadow-[0_25px_60px_rgba(0,0,0,0.14)]",
+                // With 5 remaining cards, avoid a leftover 1-2 card gap on
+                // the last row at both the md (2-col) and xl (3-col)
+                // breakpoints by widening the 4th/5th cards to fill it.
+                index === rest.length - 2 && "xl:col-span-2",
+                index === rest.length - 1 && "md:col-span-2 xl:col-span-1"
+              )}
             >
               <Image
                 src={item.image}

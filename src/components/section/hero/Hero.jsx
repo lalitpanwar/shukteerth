@@ -68,7 +68,7 @@ export default function Hero() {
           <div className="mt-12 flex flex-wrap justify-center gap-5">
             <ButtonLink
               href="/shukteerth"
-              variant="default"
+              
               endIcon={<ArrowRight />}
             >
               शुकतीर्थ जानें

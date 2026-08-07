@@ -13,6 +13,8 @@ import {
   MapPin,
   ShieldCheck,
   BookOpen,
+  PhoneCall,
+  MapIcon,
 } from "lucide-react";
 
 import Section from "@/components/shared/section";
@@ -21,7 +23,7 @@ import { ButtonLink } from "@/components/ui/custom";
 
 export default function VisitShukteerth() {
   return (
-    <Section className="relative overflow-hidden bg-brand-ivory py-24 lg:py-32">
+    <Section id="visit" className="relative scroll-mt-32 overflow-hidden bg-brand-ivory py-24 lg:py-32">
       <Container>
 
         {/* ============================
@@ -314,17 +316,18 @@ export default function VisitShukteerth() {
         <ButtonLink
           href="https://maps.google.com"
           target="_blank"
-          className="h-12 rounded-xl text-base font-medium"
+         startIcon={<MapIcon />}
+          
         >
-          🧭 Google Maps पर दिशा देखें
+          Google Maps पर दिशा देखें 
         </ButtonLink>
 
         <ButtonLink
           href="/contact"
           variant="secondary"
-          className="h-12 rounded-xl text-base font-medium"
+         startIcon={<PhoneCall />}
         >
-          📞 यात्रा की जानकारी लें
+          यात्रा की जानकारी लें 
         </ButtonLink>
       </div>
 

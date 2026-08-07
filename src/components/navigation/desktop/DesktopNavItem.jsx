@@ -13,10 +13,10 @@ export function DesktopNavItem({ item, active }) {
       <Link
         href={item.href}
         className={cn(
-          "rounded-xl px-4 py-2 text-sm font-medium transition-colors",
+          "rounded-xl px-4 py-2 text-sm font-medium transition-colors hover:bg-brand-sand/60",
           active
-            ? "text-brand-maroon"
-            : "text-brand-brown hover:text-brand-maroon"
+            ? "text-brand-primary"
+            : "text-brand-brown hover:text-brand-primary"
         )}
       >
         {item.label}
@@ -29,10 +29,10 @@ export function DesktopNavItem({ item, active }) {
       <Link
         href={item.href}
         className={cn(
-          "flex items-center gap-1 rounded-xl px-4 py-2 text-sm font-medium transition-colors",
+          "flex items-center gap-1 rounded-xl px-4 py-2 text-sm font-medium transition-colors group-hover:bg-brand-sand/60",
           active
-            ? "text-brand-maroon"
-            : "text-brand-brown group-hover:text-brand-maroon"
+            ? "text-brand-primary"
+            : "text-brand-brown group-hover:text-brand-primary"
         )}
       >
         {item.label}

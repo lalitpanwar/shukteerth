@@ -40,7 +40,7 @@ export function DesktopDropdown({ items }) {
             text-brand-brown
             transition-colors
             hover:bg-brand-sand
-            hover:text-brand-maroon
+            hover:text-brand-primary
           "
         >
           {child.label}

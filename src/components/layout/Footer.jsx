@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
-
+  Flower2,
   Youtube,
   Phone,
   Mail,
@@ -33,23 +33,27 @@ export default function Footer() {
           className="object-cover"
         />
 
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/70 to-[#241B15]" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/65 via-black/60 to-[#241B15]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_45%,rgba(0,0,0,0.55),transparent_100%)]" />
 
         <Container className="relative z-10 flex h-full items-center justify-center">
 
           <div className="max-w-4xl text-center">
 
-            <span className="inline-flex rounded-full border border-white/20 bg-white/10 px-5 py-2 backdrop-blur">
-              🌸 श्री शुकदेव आश्रम
-            </span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-brand-gold/30 bg-black/30 px-5 py-2 backdrop-blur">
+              <Flower2 className="h-4 w-4 text-brand-gold" />
+              <span className="text-sm uppercase tracking-[0.15em] text-white">
+                श्री शुकदेव आश्रम
+              </span>
+            </div>
 
-            <h2 className="mt-8 font-heading text-4xl leading-tight text-white md:text-6xl">
+            <h2 className="mt-8 font-heading text-4xl leading-tight text-white [text-shadow:0_2px_16px_rgba(0,0,0,0.6)] md:text-6xl">
               यत्र भागवत कथा प्रवहति,
               <br />
               तत्र स्वयं भगवान का निवास होता है।
             </h2>
 
-            <p className="mx-auto mt-8 max-w-3xl text-lg leading-9 text-white/80">
+            <p className="mx-auto mt-8 max-w-3xl text-lg leading-9 text-white/90 [text-shadow:0_1px_10px_rgba(0,0,0,0.6)]">
               आइए, इस दिव्य परम्परा का हिस्सा बनें और
               श्रीमद्भागवत कथा, सेवा एवं दर्शन के माध्यम से
               अपने जीवन को आध्यात्मिक प्रकाश से आलोकित करें।
@@ -82,7 +86,11 @@ export default function Footer() {
 
       {/* Main Footer Start */}
 
-      <Container className="py-20">
+      {/* Ambient Decoration */}
+      <div className="pointer-events-none absolute -left-32 top-24 h-72 w-72 rounded-full bg-brand-gold/6 blur-3xl" />
+      <div className="pointer-events-none absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-brand-gold/5 blur-3xl" />
+
+      <Container className="relative py-20">
                 {/* ==========================================
             Footer Grid
         =========================================== */}
@@ -130,7 +138,7 @@ export default function Footer() {
                   border-white/15
                   transition
                   hover:bg-brand-gold
-                  hover:text-black
+                  hover:text-brand-brown
                 "
               >
                 <FaFacebookF className="h-5 w-5" />
@@ -149,7 +157,7 @@ export default function Footer() {
                   border-white/15
                   transition
                   hover:bg-brand-gold
-                  hover:text-black
+                  hover:text-brand-brown
                 "
               >
                 <FaInstagram className="h-5 w-5" />
@@ -168,7 +176,7 @@ export default function Footer() {
                   border-white/15
                   transition
                   hover:bg-brand-gold
-                  hover:text-black
+                  hover:text-brand-brown
                 "
               >
                 <FaYoutube className="h-5 w-5" />
@@ -184,23 +192,23 @@ export default function Footer() {
 
           <div>
 
-            <h3 className="font-heading text-2xl text-white">
+            <h3 className="inline-block border-b-2 border-brand-gold/40 pb-2 font-heading text-2xl text-white">
               त्वरित लिंक
             </h3>
 
             <ul className="mt-8 space-y-5">
 
-              <li><Link href="/">मुखपृष्ठ</Link></li>
+              <li><Link href="/" className="transition-colors hover:text-brand-gold">मुखपृष्ठ</Link></li>
 
-              <li><Link href="/about">आश्रम परिचय</Link></li>
+              <li><Link href="/about" className="transition-colors hover:text-brand-gold">आश्रम परिचय</Link></li>
 
-              <li><Link href="/guru-parampara">गुरु परम्परा</Link></li>
+              <li><Link href="/guru-parampara" className="transition-colors hover:text-brand-gold">गुरु परम्परा</Link></li>
 
-              <li><Link href="/ashram-life">आश्रम जीवन</Link></li>
+              <li><Link href="/ashram-life" className="transition-colors hover:text-brand-gold">आश्रम जीवन</Link></li>
 
-              <li><Link href="/gallery">गैलरी</Link></li>
+              <li><Link href="/gallery" className="transition-colors hover:text-brand-gold">गैलरी</Link></li>
 
-              <li><Link href="/contact">संपर्क</Link></li>
+              <li><Link href="/contact" className="transition-colors hover:text-brand-gold">संपर्क</Link></li>
 
             </ul>
 
@@ -212,23 +220,23 @@ export default function Footer() {
 
           <div>
 
-            <h3 className="font-heading text-2xl text-white">
+            <h3 className="inline-block border-b-2 border-brand-gold/40 pb-2 font-heading text-2xl text-white">
               सेवाएँ
             </h3>
 
             <ul className="mt-8 space-y-5">
 
-              <li><Link href="/bhagwat-katha">श्रीमद्भागवत कथा</Link></li>
+              <li><Link href="/bhagwat-katha" className="transition-colors hover:text-brand-gold">श्रीमद्भागवत कथा</Link></li>
 
-              <li><Link href="/visit">शुकतीर्थ पधारें</Link></li>
+              <li><Link href="/visit" className="transition-colors hover:text-brand-gold">शुकतीर्थ पधारें</Link></li>
 
-              <li><Link href="/donate">दान एवं सेवा</Link></li>
+              <li><Link href="/donate" className="transition-colors hover:text-brand-gold">दान एवं सेवा</Link></li>
 
-              <li><Link href="/events">आयोजन</Link></li>
+              <li><Link href="/events" className="transition-colors hover:text-brand-gold">आयोजन</Link></li>
 
-              <li><Link href="/blogs">आध्यात्मिक लेख</Link></li>
+              <li><Link href="/blogs" className="transition-colors hover:text-brand-gold">आध्यात्मिक लेख</Link></li>
 
-              <li><Link href="/faq">प्रश्नोत्तर</Link></li>
+              <li><Link href="/faq" className="transition-colors hover:text-brand-gold">प्रश्नोत्तर</Link></li>
 
             </ul>
 
@@ -240,7 +248,7 @@ export default function Footer() {
 
           <div>
 
-            <h3 className="font-heading text-2xl text-white">
+            <h3 className="inline-block border-b-2 border-brand-gold/40 pb-2 font-heading text-2xl text-white">
               संपर्क करें
             </h3>
 
@@ -248,7 +256,7 @@ export default function Footer() {
 
               <div className="flex gap-4">
 
-                <MapPin className="mt-1 h-5 w-5 text-brand-gold" />
+                <MapPin className="mt-1 h-5 w-5 shrink-0 text-brand-gold" />
 
                 <p className="leading-8 text-white/70">
                   श्री शुकदेव आश्रम,
@@ -263,9 +271,9 @@ export default function Footer() {
 
               <div className="flex gap-4">
 
-                <Phone className="mt-1 h-5 w-5 text-brand-gold" />
+                <Phone className="mt-1 h-5 w-5 shrink-0 text-brand-gold" />
 
-                <Link href="tel:+919999999999">
+                <Link href="tel:+919999999999" className="transition-colors hover:text-brand-gold">
                   +91 99999 99999
                 </Link>
 
@@ -273,9 +281,9 @@ export default function Footer() {
 
               <div className="flex gap-4">
 
-                <Mail className="mt-1 h-5 w-5 text-brand-gold" />
+                <Mail className="mt-1 h-5 w-5 shrink-0 text-brand-gold" />
 
-                <Link href="mailto:info@shukdevashram.org">
+                <Link href="mailto:info@shukdevashram.org" className="transition-colors hover:text-brand-gold">
                   info@shukdevashram.org
                 </Link>
 

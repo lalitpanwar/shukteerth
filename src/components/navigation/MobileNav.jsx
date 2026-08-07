@@ -16,12 +16,10 @@ import {
 import {
   Sheet,
   SheetContent,
-  SheetFooter,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { ButtonLink } from "../ui/custom";
 
 function formatNavigationLabel(key) {
   return key.replace(/([A-Z])/g, " $1").replace(/^./, (letter) => letter.toUpperCase());
@@ -53,7 +51,7 @@ export function MobileNav() {
       >
         <SheetHeader className="border-b border-brand-border px-6 py-5">
           <SheetTitle className="text-left">
-            <span className="block text-lg font-semibold text-brand-maroon">
+            <span className="block text-lg font-semibold text-brand-primary">
               Shri Shukdev Ashram
             </span>
             <span className="mt-1 block text-xs text-brand-brown/70">
@@ -81,7 +79,7 @@ export function MobileNav() {
                     aria-current={isActive ? "page" : undefined}
                     className={`flex rounded-lg px-3 py-2.5 text-sm font-medium transition hover:bg-brand-sand/60 ${
                       isActive
-                        ? "bg-brand-sand text-brand-maroon"
+                        ? "bg-brand-sand text-brand-primary"
                         : "text-brand-brown"
                     }`}
                   >
@@ -95,7 +93,7 @@ export function MobileNav() {
                   <AccordionTrigger
                     className={`rounded-lg px-3 py-2.5 hover:bg-brand-sand/60 hover:no-underline ${
                       isActive || hasActiveChild
-                        ? "bg-brand-sand text-brand-maroon"
+                        ? "bg-brand-sand text-brand-primary"
                         : "text-brand-brown"
                     }`}
                   >
@@ -109,7 +107,7 @@ export function MobileNav() {
                         aria-current={isActive ? "page" : undefined}
                         className={`rounded-md px-3 py-2 text-sm transition hover:bg-brand-sand/60 hover:text-brand-brown ${
                           isActive
-                            ? "bg-brand-sand text-brand-maroon"
+                            ? "bg-brand-sand text-brand-primary"
                             : "text-brand-brown/75"
                         }`}
                       >
@@ -123,7 +121,7 @@ export function MobileNav() {
                           aria-current={pathname === child.href ? "page" : undefined}
                           className={`rounded-md px-3 py-2 text-sm transition hover:bg-brand-sand/60 hover:text-brand-brown ${
                             pathname === child.href
-                              ? "bg-brand-sand text-brand-maroon"
+                              ? "bg-brand-sand text-brand-primary"
                               : "text-brand-brown/75"
                           }`}
                         >
@@ -137,17 +135,6 @@ export function MobileNav() {
             })}
           </Accordion>
         </nav>
-
-        <div className="border-t border-brand-border bg-brand-sand/30 p-5">
-          <p className="mb-3 text-sm text-brand-brown/80">
-            Support the Ashram through your contribution.
-          </p>
-          <SheetFooter className="p-0">
-            <ButtonLink href="/donate" className="w-full" onClick={() => setOpen(false)}>
-              Donate Now
-            </ButtonLink>
-          </SheetFooter>
-        </div>
       </SheetContent>
     </Sheet>
   );

@@ -256,6 +256,15 @@ xl:gap-16
       सनातन संस्कृति की दिव्य परम्परा का शुभारम्भ किया।
     </p>
 
+    <ButtonLink
+      href="/guru-parampara/swami-kalyan-dev"
+      variant="link"
+      endIcon={<ArrowRight className="h-4 w-4" />}
+      className="mt-4 h-auto p-0 text-sm"
+    >
+      पूरा परिचय पढ़ें
+    </ButtonLink>
+
   </div>
 
 </div>
@@ -304,6 +313,21 @@ xl:gap-16
       गुरु परम्परा को सेवा, आध्यात्मिक मार्गदर्शन एवं
       वैदिक संस्कृति के संरक्षण के साथ निरंतर आगे बढ़ा रहे हैं।
     </p>
+
+    <p className="mt-4 max-w-md text-sm italic leading-7 text-brand-brown/60">
+      &ldquo;गुरुदेव की साधना ने शुकतीर्थ धाम को जाग्रत कर उसे
+      अंतरराष्ट्रीय पहचान दी।&rdquo;
+      <span className="not-italic"> — स्वामी ओमानन्द जी महाराज</span>
+    </p>
+
+    <ButtonLink
+      href="/guru-parampara/swami-omanand"
+      variant="link"
+      endIcon={<ArrowRight className="h-4 w-4" />}
+      className="mt-4 h-auto p-0 text-sm"
+    >
+      पूरा परिचय एवं सेवा-कार्य पढ़ें
+    </ButtonLink>
 
   </div>
 

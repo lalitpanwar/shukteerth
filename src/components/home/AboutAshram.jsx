@@ -1,22 +1,33 @@
 import Image from "next/image";
-import { ShieldCheck } from "lucide-react";
+import { ShieldCheck, BookOpen, Landmark, Flower2, HeartHandshake } from "lucide-react";
 
 import Section from "@/components/shared/section";
 import Container from "@/components/shared/container";
 import { ButtonLink } from "@/components/ui/custom";
 
 const highlights = [
-  "श्रीमद्भागवत कथा की पावन परम्परा",
-  "परम पूज्य स्वामी कल्याण देव जी द्वारा स्थापित",
-  "गुरु परम्परा द्वारा संरक्षित",
-  "सेवा, साधना एवं संस्कृति का केन्द्र",
+  { icon: BookOpen, text: "श्रीमद्भागवत कथा की पावन परम्परा" },
+  { icon: Landmark, text: "परम पूज्य स्वामी कल्याण देव जी द्वारा स्थापित" },
+  { icon: Flower2, text: "गुरु परम्परा द्वारा संरक्षित" },
+  { icon: HeartHandshake, text: "सेवा, साधना एवं संस्कृति का केन्द्र" },
+];
+
+const stats = [
+  { value: "5000+", label: "वर्ष परम्परा" },
+  { value: "2", label: "गुरु परम्परा" },
+  { value: "300+", label: "सेवा संस्थान" },
 ];
 
 export default function AboutAshram() {
   return (
-    <Section className="bg-white">
+    <Section className="relative overflow-hidden bg-white py-20 md:py-24 xl:py-28">
 
-      <Container>
+      {/* Background Decoration */}
+
+      <div className="pointer-events-none absolute -left-40 -top-40 h-96 w-96 rounded-full bg-brand-gold/4 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-52 -right-40 h-120 w-120 rounded-full bg-brand-primary/4 blur-3xl" />
+
+      <Container className="relative">
 
         {/* Heading */}
 
@@ -62,16 +73,36 @@ export default function AboutAshram() {
 
         {/* Image */}
 
-        <div className="mt-16 overflow-hidden rounded-3xl shadow-xl">
+        <div className="mt-16">
 
-          {/* TEMP: swap for real photo */}
-          <Image
-            src="/images/home/shri-shukdev-ashram-muzaffarnagar.webp"
-            alt="श्री शुकदेव आश्रम"
-            width={1600}
-            height={900}
-            className="aspect-[16/9] w-full object-cover"
-          />
+          <div className="overflow-hidden rounded-4xl border border-brand-gold/20 p-3">
+
+            <div className="relative aspect-video overflow-hidden rounded-3xl">
+
+              {/* TEMP: swap for real photo */}
+              <Image
+                src="/images/home/shri-shukdev-ashram-muzaffarnagar.webp"
+                alt="श्री शुकदेव आश्रम"
+                fill
+                sizes="100vw"
+                className="object-cover"
+              />
+
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6 md:p-8">
+
+                <p className="font-heading text-xl text-white md:text-2xl">
+                  श्री शुकदेव आश्रम
+                </p>
+
+                <p className="mt-1 text-sm text-white/75">
+                  शुकतीर्थ, उत्तर प्रदेश
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
 
         </div>
 
@@ -136,7 +167,7 @@ export default function AboutAshram() {
 
           {/* Right */}
 
-          <div className="rounded-3xl bg-brand-sand/40 p-8">
+          <div className="rounded-3xl border border-brand-gold/15 bg-brand-sand/30 p-8">
 
             <h4 className="font-heading text-2xl text-brand-brown">
 
@@ -144,25 +175,47 @@ export default function AboutAshram() {
 
             </h4>
 
-            <div className="mt-8 space-y-6">
+            <div className="mt-8 space-y-5">
 
-              {highlights.map((item) => (
+              {highlights.map(({ icon: Icon, text }) => (
 
                 <div
-                  key={item}
+                  key={text}
                   className="flex items-start gap-4"
                 >
 
-                  <span className="mt-1 text-brand-gold">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-gold/10">
 
-                    ✦
+                    <Icon className="h-4 w-4 text-brand-primary" />
 
                   </span>
 
-                  <p className="leading-7 text-brand-brown/80">
+                  <p className="mt-1.5 leading-7 text-brand-brown/80">
 
-                    {item}
+                    {text}
 
+                  </p>
+
+                </div>
+
+              ))}
+
+            </div>
+
+            {/* Stats */}
+
+            <div className="mt-8 grid grid-cols-3 gap-3 border-t border-brand-gold/15 pt-6">
+
+              {stats.map((stat) => (
+
+                <div key={stat.label} className="text-center">
+
+                  <p className="font-heading text-xl text-brand-primary md:text-2xl">
+                    {stat.value}
+                  </p>
+
+                  <p className="mt-1 text-[11px] uppercase tracking-widest text-brand-brown/60">
+                    {stat.label}
                   </p>
 
                 </div>

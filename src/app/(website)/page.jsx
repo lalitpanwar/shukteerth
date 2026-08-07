@@ -4,6 +4,7 @@ import AboutAshram from "@/components/home/AboutAshram";
 import GuruParampara from "@/components/home/GuruParampara";
 import AshramServices from "@/components/home/AshramServices";
 import VisitShukteerth from "@/components/home/VisitShukteerth";
+import FAQ from "@/components/home/FAQ";
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <GuruParampara />
       <AshramServices />
       <VisitShukteerth />
+      <FAQ />
     </>
   );
 }
