@@ -12,6 +12,7 @@ import {
   Clock3,
   MapPin,
   ShieldCheck,
+  BookOpen,
 } from "lucide-react";
 
 import Section from "@/components/shared/section";
@@ -99,7 +100,7 @@ export default function VisitShukteerth() {
 
               {/* Bottom Gradient */}
 
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/60 to-transparent p-8">
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/60 to-transparent p-8">
 
                 <div className="inline-flex h-14 w-14 items-center justify-center rounded-full border border-brand-gold/30 bg-brand-gold/10 backdrop-blur">
 
@@ -133,7 +134,7 @@ export default function VisitShukteerth() {
       <div className="flex h-10 w-10 items-center justify-center rounded-full border border-brand-gold/25 bg-brand-gold/10">
         <MapPin className="h-5 w-5 text-brand-primary" />
       </div>
-      <h3 className="font-heading text-2xl font-bold text-brand-brown">
+      <h3 className="font-heading text-2xl text-brand-brown">
         कैसे पहुँचें
       </h3>
     </div>
@@ -145,7 +146,7 @@ export default function VisitShukteerth() {
         <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-gold/10">
           <Car className="h-5.5 w-5.5 text-brand-primary" />
         </div>
-        <h4 className="mt-3.5 font-heading text-lg font-bold text-brand-brown">
+        <h4 className="mt-3.5 font-heading text-lg text-brand-brown">
           सड़क मार्ग
         </h4>
         <p className="mt-1.5 text-xs text-brand-brown/70 leading-relaxed">
@@ -162,7 +163,7 @@ export default function VisitShukteerth() {
         <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-gold/10">
           <Train className="h-5.5 w-5.5 text-brand-primary" />
         </div>
-        <h4 className="mt-3.5 font-heading text-lg font-bold text-brand-brown">
+        <h4 className="mt-3.5 font-heading text-lg text-brand-brown">
           रेलवे स्टेशन
         </h4>
         <p className="mt-1.5 text-xs text-brand-brown/70 leading-relaxed">
@@ -179,7 +180,7 @@ export default function VisitShukteerth() {
         <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-gold/10">
           <Plane className="h-5.5 w-5.5 text-brand-primary" />
         </div>
-        <h4 className="mt-3.5 font-heading text-lg font-bold text-brand-brown">
+        <h4 className="mt-3.5 font-heading text-lg text-brand-brown">
           एयरपोर्ट
         </h4>
         <p className="mt-1.5 text-xs text-brand-brown/70 leading-relaxed">
@@ -199,8 +200,8 @@ export default function VisitShukteerth() {
       <div className="flex h-10 w-10 items-center justify-center rounded-full border border-brand-gold/25 bg-brand-gold/10">
         <BedDouble className="h-5 w-5 text-brand-primary" />
       </div>
-      <h3 className="font-heading text-2xl font-bold text-brand-brown">
-        आश्रम सुविधाएँ
+      <h3 className="font-heading text-2xl text-brand-brown">
+        आश्रम सुविधाएँ एवं आध्यात्मिक अनुभव
       </h3>
     </div>
 
@@ -213,7 +214,7 @@ export default function VisitShukteerth() {
             <BedDouble className="h-6 w-6 text-brand-primary" />
           </div>
           <div>
-            <h4 className="font-heading text-lg font-bold text-brand-brown">आश्रम आवास</h4>
+            <h4 className="font-heading text-lg text-brand-brown">आश्रम आवास</h4>
             <p className="mt-1 text-xs leading-relaxed text-brand-brown/70">
               यजमान एवं परिवार के लिए स्वच्छ एवं आरामदायक आवास व्यवस्था।
             </p>
@@ -228,28 +229,50 @@ export default function VisitShukteerth() {
             <UtensilsCrossed className="h-6 w-6 text-brand-primary" />
           </div>
           <div>
-            <h4 className="font-heading text-lg font-bold text-brand-brown">सात्विक भोजन</h4>
+            <h4 className="font-heading text-lg text-brand-brown">सात्विक भोजन</h4>
             <p className="mt-1 text-xs leading-relaxed text-brand-brown/70">
               प्रतिदिन प्रसाद एवं शुद्ध सात्विक भोजन की उत्तम व्यवस्था।
             </p>
           </div>
         </div>
       </div>
+       {/* Bhagwat katha */}
+<div className="rounded-2xl border border-brand-gold/15 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-gold/30 hover:shadow-md">
+  <div className="flex items-center gap-3.5">
 
+    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-gold/10">
+      <BookOpen className="h-6 w-6 text-brand-primary" />
+    </div>
+
+    <div>
+
+      <h4 className="font-heading text-lg text-brand-brown">
+        दैनिक श्रीमद्भागवत कथा
+      </h4>
+
+      <p className="mt-1 text-xs leading-relaxed text-brand-brown/70">
+        प्रतिदिन विद्वान आचार्यों द्वारा
+        श्रीमद्भागवत कथा एवं सत्संग का आयोजन।
+      </p>
+
+    </div>
+
+  </div>
+</div>
       {/* Parking */}
-      <div className="rounded-2xl border border-brand-gold/15 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-gold/30 hover:shadow-md">
+      {/* <div className="rounded-2xl border border-brand-gold/15 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-gold/30 hover:shadow-md">
         <div className="flex items-center gap-3.5">
           <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-gold/10">
             <ParkingCircle className="h-6 w-6 text-brand-primary" />
           </div>
           <div>
-            <h4 className="font-heading text-lg font-bold text-brand-brown">पार्किंग</h4>
+            <h4 className="font-heading text-lg text-brand-brown">पार्किंग</h4>
             <p className="mt-1 text-xs leading-relaxed text-brand-brown/70">
               चार पहिया एवं दो पहिया वाहनों हेतु सुरक्षित पार्किंग स्थान।
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Darshan */}
       <div className="rounded-2xl border border-brand-gold/15 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-gold/30 hover:shadow-md">
@@ -258,13 +281,14 @@ export default function VisitShukteerth() {
             <Clock3 className="h-6 w-6 text-brand-primary" />
           </div>
           <div>
-            <h4 className="font-heading text-lg font-bold text-brand-brown">दर्शन समय</h4>
+            <h4 className="font-heading text-lg text-brand-brown">दर्शन समय</h4>
             <p className="mt-1 text-xs leading-relaxed text-brand-brown/70">
               प्रतिदिन प्रातः 5:00 AM से रात्रि 9:00 PM तक खुला रहता है।
             </p>
           </div>
         </div>
       </div>
+
     </div>
 
     {/* Heritage Banner */}
@@ -274,7 +298,7 @@ export default function VisitShukteerth() {
           <ShieldCheck className="h-6 w-6 text-brand-primary" />
         </div>
         <div>
-          <h4 className="font-heading text-base font-bold text-brand-brown">
+          <h4 className="font-heading text-base text-brand-brown">
             श्रद्धा के साथ इस पावन भूमि पर अवश्य पधारें।
           </h4>
           <p className="mt-0.5 text-xs text-brand-brown/70">
@@ -309,7 +333,9 @@ export default function VisitShukteerth() {
       </p>
     </div>
   </div>
+  
 </div>
+
 
         </div>
 

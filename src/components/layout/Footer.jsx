@@ -24,14 +24,16 @@ export default function Footer() {
 
       <div className="relative h-[520px] overflow-hidden">
 
+        {/* TEMP: swap for real photo */}
         <Image
-          src="/images/footer/footer-banner.webp"
+          src="/images/home/shri-shukdev-ashram-muzaffarnagar.webp"
           alt="Shri Shukdev Ashram"
           fill
+          sizes="100vw"
           className="object-cover"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/70 to-[#241B15]" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/70 to-[#241B15]" />
 
         <Container className="relative z-10 flex h-full items-center justify-center">
 
@@ -93,12 +95,15 @@ export default function Footer() {
 
           <div>
 
-            <Image
-              src="/images/logo/footer-logo.svg"
-              alt="Shri Shukdev Ashram"
-              width={180}
-              height={180}
-            />
+            <div className="flex items-center gap-3">
+              <div className="size-14 shrink-0 rounded-full bg-brand-gold" />
+              <div>
+                <p className="font-heading text-xl font-semibold text-white">
+                  Shri Shukdev Ashram
+                </p>
+                <p className="text-xs text-white/60">Shukteerth</p>
+              </div>
+            </div>
 
             <p className="mt-8 max-w-sm leading-8 text-white/70">
               श्री शुकदेव आश्रम, शुकतीर्थ की प्राचीन

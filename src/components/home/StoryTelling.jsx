@@ -27,17 +27,12 @@ export default function StoryTelling() {
         {/* Heading */}
 
         <div className="mx-auto mb-20 max-w-3xl text-center">
-          <div className="mb-8 flex items-center justify-center gap-4">
-            <span className="h-px w-16 bg-brand-gold/40"></span>
+          <span className="text-sm uppercase tracking-[0.25em] text-brand-primary">
 
-            <span className="h-2 w-2 rounded-full bg-brand-gold"></span>
+            ✦ शुकतीर्थ की दिव्य यात्रा ✦
 
-            <span className="h-px w-16 bg-brand-gold/40"></span>
-          </div>
+          </span>
 
-          <p className="text-sm uppercase tracking-[0.22em] text-brand-primary">
-            शुकतीर्थ की दिव्य यात्रा
-          </p>
 
           <h2 className="mt-6 font-heading text-4xl leading-tight text-brand-brown md:text-5xl">
             जहाँ समय ठहर जाता है
@@ -68,7 +63,7 @@ export default function StoryTelling() {
 
               <div
                 key={activeItem.id}
-                className="absolute inset-x-0 animate-fade bottom-0 bg-gradient-to-t from-brand-brown via-brand-brown/70 to-transparent p-8"
+                className="pointer-events-none absolute inset-x-0 animate-fade bottom-0 bg-gradient-to-t from-brand-brown via-brand-brown/70 to-transparent p-8"
               >
                 <span className="text-xs uppercase tracking-[0.18em] text-brand-gold">
                   {activeItem.overlayBadge}
@@ -131,7 +126,7 @@ export default function StoryTelling() {
 
                         {/* Overlay */}
 
-                        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-brown via-brand-brown/60 to-transparent p-5">
+                        <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-brown via-brand-brown/60 to-transparent p-5">
                           <span className="text-[11px] uppercase tracking-[0.22em] text-brand-gold">
                             ✦ {story.overlayBadge}
                           </span>

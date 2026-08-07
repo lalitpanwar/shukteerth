@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ShieldCheck } from "lucide-react";
 
 import Section from "@/components/shared/section";
 import Container from "@/components/shared/container";
@@ -45,14 +46,27 @@ export default function AboutAshram() {
 
           </p>
 
+          {/* Trust badge */}
+
+          <div className="mt-8 inline-flex items-center gap-2.5 rounded-2xl border border-brand-border bg-brand-sand/40 px-5 py-3 text-left text-sm text-brand-brown/80 shadow-sm">
+
+            <ShieldCheck className="h-5 w-5 shrink-0 text-brand-gold" />
+
+            <span>
+              <strong className="text-brand-brown">श्री शुकदेव आश्रम स्वामी कल्याणदेव सेवा ट्रस्ट</strong> — पंजीकृत धार्मिक एवं चैरिटेबल ट्रस्ट
+            </span>
+
+          </div>
+
         </div>
 
         {/* Image */}
 
         <div className="mt-16 overflow-hidden rounded-3xl shadow-xl">
 
+          {/* TEMP: swap for real photo */}
           <Image
-            src="/images/about/about-ashram.jpg"
+            src="/images/home/shri-shukdev-ashram-muzaffarnagar.webp"
             alt="श्री शुकदेव आश्रम"
             width={1600}
             height={900}

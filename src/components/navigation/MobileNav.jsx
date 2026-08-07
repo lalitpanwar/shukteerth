@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import {  Menu } from "lucide-react";
 
 import { NAVIGATION } from "@/config/navigation";
-import { Button } from "@/components/ui/_oldbutton";
+import { Button } from "@/components/ui/button";
 import {
   Accordion,
   AccordionContent,

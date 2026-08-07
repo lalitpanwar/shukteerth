@@ -29,7 +29,7 @@ export default function StoryStickyImage() {
 
         {/* Dark Gradient */}
 
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
         {/* Caption */}
 

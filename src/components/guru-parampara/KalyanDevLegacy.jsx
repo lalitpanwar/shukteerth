@@ -1,0 +1,47 @@
+import { Flower2, ArrowRight } from "lucide-react";
+
+import Section from "@/components/shared/section";
+import Container from "@/components/shared/container";
+import { ButtonLink } from "@/components/ui/custom";
+
+export function KalyanDevLegacy() {
+  return (
+    <Section className="relative overflow-hidden bg-brand-primary py-20 text-white md:py-28">
+      <div className="pointer-events-none absolute -left-40 -top-40 h-96 w-96 rounded-full bg-brand-gold/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-52 -right-40 h-[30rem] w-[30rem] rounded-full bg-brand-gold/10 blur-3xl" />
+
+      <Container className="relative z-10">
+        <div className="mx-auto max-w-3xl text-center">
+          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-brand-gold/30 bg-brand-gold/10">
+            <Flower2 className="h-7 w-7 text-brand-gold" />
+          </div>
+
+          <h2 className="mt-8 font-heading text-3xl leading-tight md:text-4xl">
+            एक अखंड परम्परा की विरासत
+          </h2>
+
+          <p className="mt-6 text-lg leading-8 text-white/80">
+            स्वामी कल्याण देव जी का जीवन शिक्षा, सेवा और समरसता का जीवंत
+            उदाहरण है। उनकी स्थापित परम्परा आज परम पूज्य स्वामी ओमानन्द
+            जी महाराज के नेतृत्व में श्री शुकदेव आश्रम, शुकतीर्थ में
+            निरंतर प्रवाहित हो रही है।
+          </p>
+
+          <div className="mt-10 flex flex-wrap justify-center gap-5">
+            <ButtonLink
+              href="/guru-parampara/swami-omanand"
+              variant="gold"
+              endIcon={<ArrowRight />}
+            >
+              स्वामी ओमानन्द जी के बारे में जानें
+            </ButtonLink>
+
+            <ButtonLink href="/ashram" variant="outline" endIcon={<ArrowRight />}>
+              आश्रम दर्शन करें
+            </ButtonLink>
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+}
