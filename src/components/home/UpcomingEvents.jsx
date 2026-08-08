@@ -29,7 +29,7 @@ const ongoing = {
 
 export default function UpcomingEvents() {
   return (
-    <Section className="bg-brand-sand/20 py-20 md:py-24">
+    <Section className="bg-white py-20 md:py-24">
       <Container>
         <div className="mx-auto mb-14 max-w-2xl text-center">
           <span className="text-sm uppercase tracking-[0.25em] text-brand-primary">

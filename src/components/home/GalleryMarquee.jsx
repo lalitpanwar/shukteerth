@@ -21,7 +21,7 @@ export default function GalleryMarquee() {
   images.forEach((src, index) => rows[index % 3].push(src));
 
   return (
-    <Section className="overflow-hidden py-20 md:py-28  border-t border-brand-border/60 bg-brand-ivory/20">
+    <Section className="overflow-hidden py-20 md:py-28  border-y border-brand-border/60 bg-brand-ivory/20">
       <Container>
         <div className="mx-auto mb-14 max-w-2xl text-center">
           <span className="text-xs font-semibold tracking-[0.25em] text-brand-gold uppercase">
