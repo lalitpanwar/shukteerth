@@ -23,7 +23,7 @@ import { ButtonLink } from "@/components/ui/custom";
 
 export default function VisitShukteerth() {
   return (
-    <Section id="visit" className="relative scroll-mt-32 overflow-hidden bg-brand-ivory py-24 lg:py-32">
+    <Section id="visit" className="relative scroll-mt-32 overflow-hidden border-y border-brand-border/60 bg-brand-sand/20 py-24 lg:py-32">
       <Container>
 
         {/* ============================
@@ -314,12 +314,12 @@ export default function VisitShukteerth() {
     <div className="pt-6">
       <div className="grid gap-3.5 sm:grid-cols-2">
         <ButtonLink
-          href="https://maps.google.com"
+          href="https://maps.google.com/?q=Shri+Shukdev+Ashram+Shukteerth"
           target="_blank"
          startIcon={<MapIcon />}
-          
+
         >
-          Google Maps पर दिशा देखें 
+          Google Maps पर दिशा देखें
         </ButtonLink>
 
         <ButtonLink

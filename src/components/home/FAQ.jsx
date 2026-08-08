@@ -24,7 +24,7 @@ export default function FAQ() {
   };
 
   return (
-    <Section className="bg-white py-20 lg:py-28">
+    <Section id="faq" className="scroll-mt-24 bg-white py-20 lg:py-28">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

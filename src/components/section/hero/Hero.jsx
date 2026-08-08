@@ -8,7 +8,7 @@ import { HeroOrnament } from "./HeroOrnament";
 
 export default function Hero() {
   return (
-    <Section className="relative min-h-[100svh] overflow-hidden" size="sm">
+    <Section className="relative min-h-[100svh] overflow-hidden boder-0" size="sm">
       {/* Background Image */}
       {/* Reused from VisitShukteerth/Footer — bright daytime shot, so the
           overlays below are intentionally heavier than a typical hero. */}
@@ -66,22 +66,20 @@ export default function Hero() {
           {/* CTA */}
 
           <div className="mt-12 flex flex-wrap justify-center gap-5">
-            <ButtonLink
-              href="/shukteerth"
-              
-              endIcon={<ArrowRight />}
-            >
+            <ButtonLink href="/shukteerth" endIcon={<ArrowRight className="h-4 w-4" />}>
               शुकतीर्थ जानें
             </ButtonLink>
 
             <ButtonLink
-              href="/book-bhagwat-katha"
+              href="/contact"
               variant="outline"
-              endIcon={<ArrowRight />}
+              className="border-white/40 text-white hover:bg-white hover:text-brand-brown"
+              endIcon={<ArrowRight className="h-4 w-4" />}
             >
-              भागवत कथा बुक करें
+              भागवत कथा हेतु संपर्क करें
             </ButtonLink>
           </div>
+
         </div>
       </Container>
 
@@ -101,15 +99,17 @@ export default function Hero() {
       </div>
 
       {/* Bottom curve with lotus */}
-      <div className="pointer-events-none absolute bottom-0 left-0 w-full">
+      {/* <div className="pointer-events-none absolute bottom-0 left-0 w-full">
         <svg
-          className="block w-full"
+          className="block w-full text-brand-ivory"
           viewBox="0 0 1120 60"
           preserveAspectRatio="none"
         >
-          <path d="M0,0 C 300,60 820,60 1120,0 L1120,60 L0,60 Z" fill="#f8f5ee" />
+          <path d="M0,0 C 300,60 820,60 1120,0 L1120,60 L0,60 Z"   fill="var(--brand-sand-soft)" />
         </svg>
-      </div>
+      </div> */}
+
+
     </Section>
   );
 }

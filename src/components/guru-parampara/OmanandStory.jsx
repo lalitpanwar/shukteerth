@@ -11,14 +11,16 @@ export function OmanandStory() {
         <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-20">
           {/* Image */}
           <div>
-            <div className="overflow-hidden rounded-[32px] border border-brand-gold/20 p-3">
-              <Image
-                src="/images/home/guru-parampara.webp"
-                alt="स्वामी कल्याण देव जी एवं स्वामी ओमानन्द जी"
-                width={900}
-                height={1200}
-                className="aspect-[4/5] w-full rounded-[26px] object-cover"
-              />
+            <div className="group overflow-hidden rounded-[32px] border border-brand-gold/20 p-3">
+              <div className="overflow-hidden rounded-[26px]">
+                <Image
+                  src="/images/home/guru-parampara.webp"
+                  alt="स्वामी कल्याण देव जी एवं स्वामी ओमानन्द जी"
+                  width={900}
+                  height={1200}
+                  className="aspect-4/5 w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
             </div>
             <p className="mt-4 text-center text-sm text-brand-brown/60">
               स्वामी ओमानन्द जी महाराज (दाएँ) अपने गुरु स्वामी कल्याण

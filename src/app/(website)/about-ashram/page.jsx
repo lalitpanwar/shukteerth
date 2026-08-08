@@ -168,14 +168,14 @@ function AboutStory() {
             </Link>
           </div>
 
-          <div className="relative aspect-4/3 overflow-hidden rounded-3xl shadow-xl lg:aspect-square">
+          <div className="group relative aspect-4/3 overflow-hidden rounded-3xl shadow-xl lg:aspect-square">
             {/* TEMP: swap for real photo */}
             <Image
               src="/images/home/gurukul.jpg"
               alt="आश्रम की परम्परा"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
           </div>
@@ -387,14 +387,14 @@ function AboutHeritage() {
     <Section className="py-20 md:py-28">
       <Container>
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <div className="relative aspect-4/3 overflow-hidden rounded-3xl shadow-xl lg:order-2">
+          <div className="group relative aspect-4/3 overflow-hidden rounded-3xl shadow-xl lg:order-2">
             {/* TEMP: swap for real photo */}
             <Image
               src="/images/home/tree.jpg"
               alt="प्राचीन वटवृक्ष"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
           </div>
 
@@ -501,13 +501,13 @@ function AboutDharmikAayojan() {
     <Section className="py-20 md:py-28">
       <Container>
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <div className="relative aspect-4/3 overflow-hidden rounded-3xl shadow-xl">
+          <div className="group relative aspect-4/3 overflow-hidden rounded-3xl shadow-xl">
             <Image
               src="/images/home/bhagwat-katha.jpg"
               alt="भागवत कथा आयोजन"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6">
               <p className="flex items-center gap-2 text-sm font-medium text-white">

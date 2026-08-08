@@ -7,7 +7,7 @@ import { ButtonLink } from "@/components/ui/custom";
 
 export default function GuruParampara() {
   return (
-    <Section className="relative overflow-hidden bg-brand-ivory py-20 md:py-24 xl:py-28">
+    <Section className="relative overflow-hidden border-y border-brand-border/60 bg-brand-ivory/20 py-20 md:py-24 xl:py-28">
 
       <Container>
 
@@ -77,28 +77,32 @@ xl:gap-16
 
               <div
                 className="
+                  group
                   overflow-hidden
                   rounded-[32px]
                   border
                   border-brand-gold/20
-                  
+
                   p-3
                 "
               >
 
-                <Image
-                  src="/images/home/guru-parampara.webp"
-                  alt="Swami Kalyan Dev Ji and Swami Omanand Ji"
-                  width={900}
-                  height={1200}
-                  className="
-                    aspect-[4/5]
-                    w-full
-                    rounded-[26px]
-                    object-cover
-                    
-                  "
-                />
+                <div className="overflow-hidden rounded-[26px]">
+                  <Image
+                    src="/images/home/guru-parampara.webp"
+                    alt="Swami Kalyan Dev Ji and Swami Omanand Ji"
+                    width={900}
+                    height={1200}
+                    className="
+                      aspect-4/5
+                      w-full
+                      object-cover
+                      transition-transform
+                      duration-700
+                      group-hover:scale-105
+                    "
+                  />
+                </div>
 
               </div>
 

@@ -3,6 +3,7 @@ import {
   OmanandStats,
   OmanandStory,
   OmanandTimeline,
+  OmanandParallaxQuote,
   OmanandMission,
   OmanandGallery,
   OmanandQuotes,
@@ -28,6 +29,7 @@ export default function SwamiOmanandPage() {
       <OmanandStats />
       <OmanandStory />
       <OmanandTimeline />
+      <OmanandParallaxQuote />
       <OmanandMission />
       <OmanandGallery />
       <OmanandQuotes />

@@ -6,7 +6,7 @@ import { omanandQuotes } from "@/data/omanandJi.data";
 
 export function OmanandQuotes() {
   return (
-    <Section className="relative overflow-hidden bg-brand-ivory py-20 md:py-28">
+    <Section className="relative overflow-hidden border-y border-brand-border/60 bg-brand-sand/20 py-20 md:py-28">
       <Container>
         <div className="mx-auto mb-16 max-w-3xl text-center">
           <span className="text-sm uppercase tracking-[0.25em] text-brand-primary">

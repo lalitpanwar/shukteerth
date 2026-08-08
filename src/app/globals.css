@@ -123,7 +123,8 @@
   --brand-ivory: #fbf2df;
   --brand-sand: #f5e6c8;
   --brand-card: #fefaf1;
-
+   --brand-sand-soft: #fcf7ef;
+  
   /* Text */
 
   --brand-brown: #2f241d;
@@ -159,7 +160,7 @@
   /* ==========================================
      LIGHT MODE (DEFAULT SHADCN & SEMANTIC MAP)
   ========================================== */
-  --background: var(--brand-ivory);
+ --background: #ffffff;
   --foreground: var(--brand-brown);
 
   --primary: var(--brand-primary);
@@ -287,6 +288,24 @@
   }
 }
 
+@keyframes marquee-ltr {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-rtl {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 /* ==========================================
    BASE STYLES
 ========================================== */
@@ -308,22 +327,7 @@
     text-rendering: optimizeLegibility;
   }
 
-  /* Subtle paper-grain texture so flat background colors don't read as dull */
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    opacity: 0.035;
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyMDAnIGhlaWdodD0nMjAwJz4KICA8ZmlsdGVyIGlkPSduJz4KICAgIDxmZVR1cmJ1bGVuY2UgdHlwZT0nZnJhY3RhbE5vaXNlJyBiYXNlRnJlcXVlbmN5PScwLjg1JyBudW1PY3RhdmVzPScyJyBzdGl0Y2hUaWxlcz0nc3RpdGNoJy8+CiAgICA8ZmVDb2xvck1hdHJpeCB0eXBlPSdzYXR1cmF0ZScgdmFsdWVzPScwJy8+CiAgPC9maWx0ZXI+CiAgPHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsdGVyPSd1cmwoI24pJy8+Cjwvc3ZnPgo=");
-    background-repeat: repeat;
-  }
 
-  body > * {
-    position: relative;
-    z-index: 1;
-  }
 
   h1,
   h2,

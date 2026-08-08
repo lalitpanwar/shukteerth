@@ -1,6 +1,7 @@
 
 import { Cormorant_Garamond, Noto_Sans_Devanagari } from "next/font/google";
 import "./globals.css";
+import SmoothScrollProvider from "@/components/shared/SmoothScrollProvider";
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-heading",
@@ -28,7 +29,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="hi"
      className={`${cormorant.variable} ${noto.variable}  antialiased`}>
-      <body>{children}</body>
+      <body>
+        <SmoothScrollProvider>{children}</SmoothScrollProvider>
+      </body>
     </html>
   );
 }

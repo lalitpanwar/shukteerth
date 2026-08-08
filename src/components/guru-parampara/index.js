@@ -12,6 +12,7 @@ export * from "./OmanandHero";
 export * from "./OmanandStats";
 export * from "./OmanandStory";
 export * from "./OmanandTimeline";
+export * from "./OmanandParallaxQuote";
 export * from "./OmanandMission";
 export * from "./OmanandGallery";
 export * from "./OmanandQuotes";

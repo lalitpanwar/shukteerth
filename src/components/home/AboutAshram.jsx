@@ -75,7 +75,7 @@ export default function AboutAshram() {
 
         <div className="mt-16">
 
-          <div className="overflow-hidden rounded-4xl border border-brand-gold/20 p-3">
+          <div className="group overflow-hidden rounded-4xl border border-brand-gold/20 p-3">
 
             <div className="relative aspect-video overflow-hidden rounded-3xl">
 
@@ -85,7 +85,7 @@ export default function AboutAshram() {
                 alt="श्री शुकदेव आश्रम"
                 fill
                 sizes="100vw"
-                className="object-cover"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
 
               <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6 md:p-8">

@@ -36,8 +36,8 @@ export function OmanandLegacy() {
               स्वामी कल्याण देव जी के बारे में जानें
             </ButtonLink>
 
-            <ButtonLink href="/ashram" variant="outline" endIcon={<ArrowRight />}>
-              आश्रम दर्शन करें
+            <ButtonLink href="/about-ashram" variant="outline" endIcon={<ArrowRight />}>
+              आश्रम के बारे में
             </ButtonLink>
           </div>
         </div>

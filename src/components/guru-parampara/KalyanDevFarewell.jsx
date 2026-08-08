@@ -23,7 +23,7 @@ const cards = [
 
 export function KalyanDevFarewell() {
   return (
-    <Section className="bg-brand-ivory py-20 md:py-28">
+    <Section className="bg-white py-20 md:py-28">
       <Container>
         <div className="mx-auto mb-16 max-w-3xl text-center">
           <span className="text-sm uppercase tracking-[0.25em] text-brand-primary">

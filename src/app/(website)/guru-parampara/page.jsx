@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
@@ -36,7 +37,7 @@ export default function GuruParamparaIndexPage() {
   return (
     <Section className="bg-brand-ivory py-20 md:py-28">
       <Container>
-        <div className="mx-auto mb-16 max-w-3xl text-center">
+        <div className="mx-auto mb-20 max-w-3xl text-center">
           <span className="text-sm uppercase tracking-[0.25em] text-brand-primary">
             ✦ गुरु परम्परा ✦
           </span>
@@ -45,53 +46,65 @@ export default function GuruParamparaIndexPage() {
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-brand-brown/75">
             श्री शुकदेव आश्रम की स्थापना से आज तक, इस पावन परम्परा को
-            आगे बढ़ाने वाले संतों का परिचय।
+            आगे बढ़ाने वाले संतों का परिचय — गुरु से शिष्य तक, एक अटूट श्रृंखला।
           </p>
         </div>
 
-        <div className="grid gap-8 sm:grid-cols-2">
-          {gurus.map((guru) => (
-            <article
-              key={guru.href}
-              className="overflow-hidden rounded-3xl border border-brand-gold/15 bg-white shadow-sm"
-            >
-              <div className="relative aspect-[4/5] w-full">
-                <Image
-                  src={guru.image}
-                  alt={guru.title}
-                  fill
-                  sizes="(min-width: 640px) 50vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
+        <div className="flex flex-col items-center gap-10 sm:flex-row sm:items-stretch sm:justify-center sm:gap-0">
+          {gurus.map((guru, index) => (
+            <Fragment key={guru.href}>
+              <article className="relative mt-16 w-full max-w-sm rounded-3xl bg-linear-to-b from-brand-primary to-[#3a1414] pt-16 pb-9 text-center shadow-xl">
+                <div className="absolute -top-16 left-1/2 -translate-x-1/2">
+                  <div className="relative h-32 w-32 overflow-hidden rounded-full border-4 border-brand-ivory shadow-lg ring-4 ring-brand-gold/70">
+                    <Image
+                      src={guru.image}
+                      alt={guru.title}
+                      fill
+                      sizes="128px"
+                      className="object-cover"
+                    />
+                  </div>
+                  <span className="absolute -right-1 -bottom-1 flex h-8 w-8 items-center justify-center rounded-full border-2 border-brand-ivory bg-brand-gold text-sm font-bold text-brand-brown shadow">
+                    {index + 1}
+                  </span>
+                </div>
 
-              <div className="p-8">
-                <span className="inline-flex rounded-full border border-brand-gold/25 px-3 py-1 text-xs font-semibold tracking-[0.18em] text-brand-primary">
-                  {guru.badge}
-                </span>
+                <div className="px-7">
+                  <span className="inline-flex rounded-full border border-brand-gold/40 px-3 py-1 text-xs font-semibold tracking-[0.18em] text-brand-gold uppercase">
+                    {guru.badge}
+                  </span>
 
-                <h2 className="mt-5 font-heading text-2xl text-brand-brown">
-                  {guru.title}
-                </h2>
+                  <h2 className="mt-4 font-heading text-xl text-white">
+                    {guru.title}
+                  </h2>
 
-                <p className="mt-1 text-sm tracking-wide text-brand-brown/60">
-                  {guru.years}
-                </p>
+                  <p className="mt-1 text-xs tracking-wide text-white/50">
+                    {guru.years}
+                  </p>
 
-                <p className="mt-4 leading-7 text-brand-brown/70">
-                  {guru.description}
-                </p>
+                  <p className="mt-4 text-sm leading-6 text-white/75">
+                    {guru.description}
+                  </p>
 
-                <ButtonLink
-                  href={guru.href}
-                  variant="link"
-                  endIcon={<ArrowRight className="h-4 w-4" />}
-                  className="mt-6 h-auto p-0"
-                >
-                  पूरा परिचय पढ़ें
-                </ButtonLink>
-              </div>
-            </article>
+                  <ButtonLink
+                    href={guru.href}
+                    variant="link"
+                    endIcon={<ArrowRight className="h-4 w-4" />}
+                    className="mt-5 h-auto p-0 text-brand-gold hover:text-brand-gold/80"
+                  >
+                    पूरा परिचय पढ़ें
+                  </ButtonLink>
+                </div>
+              </article>
+
+              {index < gurus.length - 1 && (
+                <div className="flex items-center justify-center py-2 sm:px-6 sm:py-0">
+                  <div className="flex h-11 w-11 rotate-90 items-center justify-center rounded-full bg-brand-gold text-brand-brown shadow-md sm:rotate-0">
+                    <ArrowRight className="h-5 w-5" />
+                  </div>
+                </div>
+              )}
+            </Fragment>
           ))}
         </div>
       </Container>

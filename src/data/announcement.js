@@ -1,9 +1,8 @@
 export const announcement = {
   icon: "📿",
-  message: "श्रीमद्भागवत कथा बुकिंग प्रारम्भ",
+  message: "आगामी पर्व — कार्तिक पूर्णिमा मेला • 24 नवंबर 2026 • शुकतीर्थ में गंगा स्नान",
   cta: {
-    label: "Book Now",
-    href: "/book-bhagwat-katha",
+    label: "और जानें",
+    href: "/shukteerth",
   },
-
 };

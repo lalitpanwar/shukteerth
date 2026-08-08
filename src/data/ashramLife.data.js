@@ -6,7 +6,7 @@ export const ashramLife = [
     description:
       "प्रतिदिन श्रीमद्भागवत कथा एवं आध्यात्मिक प्रवचनों के माध्यम से श्रद्धालुओं को सनातन ज्ञान का अमृत प्रदान किया जाता है।",
     image: "/images/home/bhagwat-katha.jpg",
-    href: "/bhagwat-booking",
+    href: "/about-ashram",
     featured: true,
   },
 
@@ -17,7 +17,7 @@ export const ashramLife = [
     description:
       "गौमाता की सेवा एवं संरक्षण हमारी प्रमुख आध्यात्मिक सेवाओं में से एक है।",
     image: "/images/home/gau-seva.jpg",
-    href: "/gau-seva",
+    href: "/about-ashram",
   },
 
   {
@@ -27,7 +27,7 @@ export const ashramLife = [
     description:
       "वैदिक शिक्षा एवं संस्कारों का संरक्षण।",
     image: "/images/home/gurukul.jpg",
-    href: "/gurukul",
+    href: "/about-ashram",
   },
 
   {
@@ -37,7 +37,7 @@ export const ashramLife = [
     description:
       "प्रतिदिन निःशुल्क भोजन सेवा।",
     image: "/images/home/annadan.jpg",
-    href: "/annadan",
+    href: "/about-ashram",
   },
 
   {
@@ -47,7 +47,7 @@ export const ashramLife = [
     description:
       "प्रकृति संरक्षण एवं हरित अभियान।",
     image: "/images/home/tree.jpg",
-    href: "/tree-plantation",
+    href: "/about-ashram",
   },
 
   {
@@ -57,6 +57,6 @@ export const ashramLife = [
     description:
       "यज्ञ, सत्संग एवं धार्मिक आयोजन।",
     image: "/images/home/events.jpg",
-    href: "/events",
+    href: "/about-ashram",
   },
 ];

@@ -22,7 +22,7 @@ export default function StoryTelling() {
   const activeItem =
     stories.find((item) => item.id === activeStory?.[0]) ?? stories[0];
   return (
-    <Section className="bg-brand-ivory">
+    <Section className="border-b border-brand-border/60 bg-brand-sand/20">
       <Container>
         {/* Heading */}
 
@@ -52,13 +52,13 @@ export default function StoryTelling() {
           {/* Left Image */}
 
           <div className="hidden lg:block">
-            <div className="relative overflow-hidden rounded-2xl border border-brand-border bg-white shadow-card">
+            <div className="group relative overflow-hidden rounded-2xl border border-brand-border bg-white shadow-card">
               <Image
                 src={activeItem.image}
                 alt={activeItem.overlayTitle}
                 width={700}
                 height={900}
-                className="aspect-[4/5] w-full object-cover transition-all duration-500"
+                className="aspect-4/5 w-full object-cover transition-all duration-500 group-hover:scale-105"
               />
 
               <div
@@ -115,13 +115,13 @@ export default function StoryTelling() {
                   <AccordionContent>
                     {/* Mobile Image */}
                     <div className="mb-8 lg:hidden">
-                      <div className="relative overflow-hidden rounded-3xl ring-1 ring-brand-gold/20 shadow-xl">
+                      <div className="group relative overflow-hidden rounded-3xl ring-1 ring-brand-gold/20 shadow-xl">
                         <Image
                           src={story.image}
                           alt={story.overlayTitle}
                           width={700}
                           height={420}
-                          className="aspect-[16/9] w-full object-cover"
+                          className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
 
                         {/* Overlay */}

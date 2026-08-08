@@ -11,7 +11,8 @@ export default function PublicLayout({ children }) {
     <>
     
             <AnnouncementBar
-      text="श्रीमद्भागवत कथा • 10–17 अगस्त • ऑनलाइन पंजीकरण प्रारम्भ"
+      text="आगामी पर्व — कार्तिक पूर्णिमा मेला • 24 नवंबर 2026 • शुकतीर्थ में गंगा स्नान"
+      href="/shukteerth"
     />
     <Header />
       <main>{children}</main>

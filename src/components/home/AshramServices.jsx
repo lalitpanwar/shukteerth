@@ -38,7 +38,7 @@ export default function AshramLife() {
           </div>
 
           <ButtonLink
-            href="/ashram-life"
+            href="/about-ashram"
             variant="link"
             endIcon={
               <ArrowRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />

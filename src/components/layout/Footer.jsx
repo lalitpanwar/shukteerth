@@ -5,12 +5,11 @@ import Link from "next/link";
 import {
   ArrowRight,
   Flower2,
-  Youtube,
   Phone,
   Mail,
   MapPin,
 } from "lucide-react";
-import { FaFacebookF, FaInstagram, FaYoutube,  } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa6";
 import Container from "@/components/shared/container";
 import { ButtonLink } from "@/components/ui/custom";
 
@@ -62,14 +61,14 @@ export default function Footer() {
             <div className="mt-12 flex flex-wrap justify-center gap-5">
 
               <ButtonLink
-                href="/bhagwat-katha"
+                href="/contact"
                 className="rounded-full px-8 py-6"
               >
                 कथा हेतु संपर्क करें
               </ButtonLink>
 
               <ButtonLink
-                href="/donate"
+                href="/contact"
                 variant="outline"
                 className="rounded-full border-white/30 px-8 py-6 text-white hover:bg-white hover:text-black"
               >
@@ -125,8 +124,12 @@ export default function Footer() {
 
             <div className="mt-10 flex gap-4">
 
+              {/* Verified: facebook.com/shukteerth */}
               <Link
-                href="#"
+                href="https://www.facebook.com/shukteerth/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook पर श्री शुकदेव आश्रम"
                 className="
                   flex
                   h-12
@@ -142,44 +145,6 @@ export default function Footer() {
                 "
               >
                 <FaFacebookF className="h-5 w-5" />
-              </Link>
-
-              <Link
-                href="#"
-                className="
-                  flex
-                  h-12
-                  w-12
-                  items-center
-                  justify-center
-                  rounded-full
-                  border
-                  border-white/15
-                  transition
-                  hover:bg-brand-gold
-                  hover:text-brand-brown
-                "
-              >
-                <FaInstagram className="h-5 w-5" />
-              </Link>
-
-              <Link
-                href="#"
-                className="
-                  flex
-                  h-12
-                  w-12
-                  items-center
-                  justify-center
-                  rounded-full
-                  border
-                  border-white/15
-                  transition
-                  hover:bg-brand-gold
-                  hover:text-brand-brown
-                "
-              >
-                <FaYoutube className="h-5 w-5" />
               </Link>
 
             </div>
@@ -200,11 +165,11 @@ export default function Footer() {
 
               <li><Link href="/" className="transition-colors hover:text-brand-gold">मुखपृष्ठ</Link></li>
 
-              <li><Link href="/about" className="transition-colors hover:text-brand-gold">आश्रम परिचय</Link></li>
+              <li><Link href="/about-ashram" className="transition-colors hover:text-brand-gold">आश्रम परिचय</Link></li>
+
+              <li><Link href="/shukteerth" className="transition-colors hover:text-brand-gold">शुकतीर्थ</Link></li>
 
               <li><Link href="/guru-parampara" className="transition-colors hover:text-brand-gold">गुरु परम्परा</Link></li>
-
-              <li><Link href="/ashram-life" className="transition-colors hover:text-brand-gold">आश्रम जीवन</Link></li>
 
               <li><Link href="/gallery" className="transition-colors hover:text-brand-gold">गैलरी</Link></li>
 
@@ -226,17 +191,13 @@ export default function Footer() {
 
             <ul className="mt-8 space-y-5">
 
-              <li><Link href="/bhagwat-katha" className="transition-colors hover:text-brand-gold">श्रीमद्भागवत कथा</Link></li>
+              <li><Link href="/contact" className="transition-colors hover:text-brand-gold">श्रीमद्भागवत कथा हेतु संपर्क</Link></li>
 
-              <li><Link href="/visit" className="transition-colors hover:text-brand-gold">शुकतीर्थ पधारें</Link></li>
+              <li><Link href="/shukteerth" className="transition-colors hover:text-brand-gold">शुकतीर्थ पधारें</Link></li>
 
-              <li><Link href="/donate" className="transition-colors hover:text-brand-gold">दान एवं सेवा</Link></li>
+              <li><Link href="/contact" className="transition-colors hover:text-brand-gold">दान एवं सेवा</Link></li>
 
-              <li><Link href="/events" className="transition-colors hover:text-brand-gold">आयोजन</Link></li>
-
-              <li><Link href="/blogs" className="transition-colors hover:text-brand-gold">आध्यात्मिक लेख</Link></li>
-
-              <li><Link href="/faq" className="transition-colors hover:text-brand-gold">प्रश्नोत्तर</Link></li>
+              <li><Link href="/#faq" className="transition-colors hover:text-brand-gold">प्रश्नोत्तर</Link></li>
 
             </ul>
 
@@ -273,8 +234,8 @@ export default function Footer() {
 
                 <Phone className="mt-1 h-5 w-5 shrink-0 text-brand-gold" />
 
-                <Link href="tel:+919999999999" className="transition-colors hover:text-brand-gold">
-                  +91 99999 99999
+                <Link href="tel:+919917488885" className="transition-colors hover:text-brand-gold">
+                  +91 99174 88885
                 </Link>
 
               </div>
@@ -316,37 +277,6 @@ export default function Footer() {
             <p className="mt-2 text-sm text-white/40">
               5000+ वर्षों की आध्यात्मिक विरासत • श्रीमद्भागवत परम्परा
             </p>
-
-          </div>
-
-          {/* Center */}
-
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
-
-            <Link
-              href="/privacy-policy"
-              className="text-white/60 transition hover:text-brand-gold"
-            >
-              गोपनीयता नीति
-            </Link>
-
-            <span className="h-1 w-1 rounded-full bg-white/20" />
-
-            <Link
-              href="/terms"
-              className="text-white/60 transition hover:text-brand-gold"
-            >
-              नियम एवं शर्तें
-            </Link>
-
-            <span className="h-1 w-1 rounded-full bg-white/20" />
-
-            <Link
-              href="/sitemap"
-              className="text-white/60 transition hover:text-brand-gold"
-            >
-              साइटमैप
-            </Link>
 
           </div>
 
