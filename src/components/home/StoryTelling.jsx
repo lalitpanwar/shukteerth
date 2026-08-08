@@ -150,14 +150,14 @@ export default function StoryTelling() {
                         {story.description}
                       </p>
 
-<ButtonLink
+{/* <ButtonLink
   href="/shukteerth"
   variant="link"
   className="mt-8 p-0 h-auto text-sm tracking-[0.15em]"
   endIcon={<ArrowRight className="h-5 w-5" />}
 >
   और जानें 
-</ButtonLink>
+</ButtonLink> */}
                     </div>
                   </AccordionContent>
                 </AccordionItem>
